@@ -80,6 +80,8 @@ def toggle_theme():
 def main():
     """Create and run the main application."""
     global window, text, statusbar
+    
+    BACKGROUND_COLOR = "white"
 
     window = tk.Tk()
     window.title("Text Editor")
@@ -115,6 +117,7 @@ def main():
 
     # Create Text Widget with Scrollbar
     text = scrolledtext.ScrolledText(window, wrap=tk.WORD, font="Helvetica 12")
+    text.config(bg=BACKGROUND_COLOR)
     text.pack(expand=True, fill=tk.BOTH)
 
     # Status Bar
