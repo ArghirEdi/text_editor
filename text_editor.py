@@ -81,8 +81,6 @@ def main():
     """Create and run the main application."""
     global window, text, statusbar
 
-    BACKGROUND_COLOR = "white" # other examples: "#B1DDC6", "#e0f0e0", "#e0e0e0"
-
     window = tk.Tk()
     window.title("Text Editor")
     window.iconbitmap("favicon.ico")
@@ -92,7 +90,6 @@ def main():
 
     # File Menu
     file_menu = tk.Menu(menubar, tearoff=0)
-    file_menu.config(bg=BACKGROUND_COLOR)
     file_menu.add_command(label="Open", command=open_file, accelerator="Ctrl+O")
     file_menu.add_command(label="Save", command=save_file, accelerator="Ctrl+S")
     file_menu.add_command(label="Save As", command=save_file)
@@ -118,7 +115,6 @@ def main():
 
     # Create Text Widget with Scrollbar
     text = scrolledtext.ScrolledText(window, wrap=tk.WORD, font="Helvetica 12")
-    text.config(padx=5, pady=5, bg=BACKGROUND_COLOR)
     text.pack(expand=True, fill=tk.BOTH)
 
     # Status Bar
